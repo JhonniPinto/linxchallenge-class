@@ -9,7 +9,7 @@ import { loadingProductsRequest } from '../../redux/actions'
 
 import fixValue from './utils/fixValue'
 
-function Products({ products, isLoading, nextPage, err, load }) {
+export function Products({ products, isLoading, nextPage, err, load }) {
     function moreProducts() {
         load(nextPage)
     }

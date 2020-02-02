@@ -14,7 +14,7 @@ export default function (state = INITIAL_STATE, action) {
             const products = [...state.products, ...action.products]
             return {...state, isLoading: false, products, nextPage: action.nextPage}
         case 'LOADING_PRODUCTS_FAILURE':
-            return {...state, err: false}
+            return {...state, err: true}
         case 'SEND_FRIEND_DATA_SUCCESS':
             return {...state, name: action.name}
         case 'CLEAR_FRIEND_DATA':

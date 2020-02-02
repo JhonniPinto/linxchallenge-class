@@ -6,7 +6,7 @@ import { sendFriendDataSuccess, clearFriendData } from '../../redux/actions'
 
 import validateForm from './utils/validateForm'
 
-class Newsletter extends Component {
+export class Newsletter extends Component {
     state = {
         form: {
             name: '',
@@ -66,7 +66,7 @@ class Newsletter extends Component {
                 <small className='newsletter-post-feedback'>
                     {name && `Novidades compartilhadas com ${name}.`}
                 </small>
-                <button onClick={this.submitForm} type='button'>Enviar agora</button>
+                <button id='send-data' onClick={this.submitForm} type='button'>Enviar agora</button>
             </form>
         </section>
     }
