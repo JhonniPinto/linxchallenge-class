@@ -12,6 +12,12 @@
     display: flex;
     flex-wrap: wrap;
 }
+.products-container .load-products-error {
+    display: block;
+    text-align: center;
+    color: #888888;
+    margin-bottom: 5px;
+}
 .products-container .more-products {
     display: block;
     font-size: 1rem;

@@ -1,10 +1,11 @@
 import axios from 'axios'
 import { takeLatest, call, put } from 'redux-saga/effects'
-import { loadingProductsRequest, loadingProductsSuccess } from './actions'
+import { loadingProductsRequest, loadingProductsSuccess, loadingProductsFailure } from './actions'
 
 function *loadProducts({page}) {
     const { data } = yield call(axios.get, page)
-    yield put(loadingProductsSuccess(data))
+    if (data.products) yield put(loadingProductsSuccess(data))
+    else yield put(loadingProductsFailure())
 }
 
 function *index() {

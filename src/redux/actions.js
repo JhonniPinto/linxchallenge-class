@@ -13,6 +13,12 @@ export function loadingProductsSuccess(data) {
     }
 }
 
+export function loadingProductsFailure() {
+    return {
+        type: 'LOADING_PRODUCTS_FAILURE'
+    }
+}
+
 export function clearFriendData() {
     return {
         type: 'CLEAR_FRIEND_DATA'
